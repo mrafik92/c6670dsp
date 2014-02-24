@@ -1,0 +1,1 @@
+"./src/platform.obj" "./src/evmc66x_uart.obj" "./src/evmc66x_spi.obj" "./src/evmc66x_nor.obj" "./src/evmc66x_i2c_eeprom.obj" "./src/evmc66x_gpio.obj" "./src/evmc66x_fpga.obj" "./src/evmc66x_ecc.obj" "./src/evmc6670_phy.obj" "./src/evmc6670.obj" "./src/evm66x_nand.obj" "./src/evm66x_i2c.obj" "../lib/debug/ti.platform.evm6670l.lite.lib" 

@@ -1,0 +1,1 @@
+"../src/evm66x_i2c.c" "../src/evm66x_nand.c" "../src/evmc6670.c" "../src/evmc6670_phy.c" "../src/evmc66x_ecc.c" "../src/evmc66x_fpga.c" "../src/evmc66x_gpio.c" "../src/evmc66x_i2c_eeprom.c" "../src/evmc66x_nor.c" "../src/evmc66x_spi.c" "../src/evmc66x_uart.c" "../src/platform.c" 

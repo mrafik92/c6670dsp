@@ -1,0 +1,1 @@
+"./obj/platforms_utils_test.obj" "../platform_utils.cmd" -l"ti.platform.evm6670l.ae66" -l"libc.a" 
