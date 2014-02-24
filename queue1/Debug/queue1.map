@@ -1,0 +1,269 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.6                      
+******************************************************************************
+>> Linked Mon Feb 24 21:48:09 2014
+
+OUTPUT FILE NAME:   <queue1.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0001bbc0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  NEARRAM               00000001   00007fff  00000008  00007ff7  RWIX
+  RAM                   00008000   fffffffe  0001417c  fffebe82  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000008    00000008    00000008   00000000    rw-
+  00000008    00000008    00000008   00000000    rw- .bss
+00008000    00008000    0001252c   00000000    rw-
+  00008000    00008000    0001252c   00000000    rw- .far
+0001a530    0001a530    0000000c   0000000c    rw-
+  0001a530    0001a530    0000000c   0000000c    rw- .fardata
+0001a540    0001a540    00001800   00001800    r-x
+  0001a540    0001a540    00001800   00001800    r-x .text
+0001bd40    0001bd40    00000400   00000000    rw-
+  0001bd40    0001bd40    00000400   00000000    rw- .stack
+0001c140    0001c140    00000044   00000044    r--
+  0001c140    0001c140    00000044   00000044    r-- .cinit
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.init_array 
+*          0    00008000    00000000     UNINITIALIZED
+
+.got       0    00000008    00000000     UNINITIALIZED
+
+.neardata 
+*          0    00000008    00000000     UNINITIALIZED
+
+.rodata    0    00000008    00000000     UNINITIALIZED
+
+.bss       0    00000008    00000008     UNINITIALIZED
+                  00000008    00000008     main.obj (.bss)
+
+.far       0    00008000    0001252c     UNINITIALIZED
+                  00008000    0001252c     main.obj (.far)
+
+.fardata   0    0001a530    0000000c     
+                  0001a530    0000000c     rts6600_elf.lib : exit.obj (.fardata)
+
+.text      0    0001a540    00001800     
+                  0001a540    00000f20     main.obj (.text)
+                  0001b460    00000180     rts6600_elf.lib : copy_decompress_rle.obj (.text:__TI_decompress_rle_core)
+                  0001b5e0    00000100                     : autoinit.obj (.text:_auto_init_elf)
+                  0001b6e0    00000100                     : cpy_tbl.obj (.text:copy_in)
+                  0001b7e0    000000e0                     : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  0001b8c0    000000e0                     : memset.obj (.text:memset)
+                  0001b9a0    000000c0                     : exit.obj (.text:exit)
+                  0001ba60    000000c0                     : tls.obj (.text:tls:init:__TI_tls_init)
+                  0001bb20    000000a0                     : memcpy64.obj (.text:memcpy)
+                  0001bbc0    00000080                     : boot.obj (.text:_c_int00)
+                  0001bc40    00000060                     : cpp_init.obj (.text:__TI_cpp_init)
+                  0001bca0    00000040                     : args_main.obj (.text:_args_main)
+                  0001bce0    00000020                     : exit.obj (.text:abort)
+                  0001bd00    00000020                     : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
+                  0001bd20    00000020                     : copy_decompress_rle.obj (.text:decompress:rle24:__TI_decompress_rle24)
+
+.stack     0    0001bd40    00000400     UNINITIALIZED
+                  0001bd40    00000008     rts6600_elf.lib : boot.obj (.stack)
+                  0001bd48    000003f8     --HOLE--
+
+.cinit     0    0001c140    00000044     
+                  0001c140    0000000d     (.cinit..fardata.load) [load image, compression = rle]
+                  0001c14d    00000003     --HOLE-- [fill = 0]
+                  0001c150    0000000c     (__TI_handler_table)
+                  0001c15c    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0001c164    00000008     (.cinit..far.load) [load image, compression = zero_init]
+                  0001c16c    00000018     (__TI_cinit_table)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0001c16c records: 3, size/record: 8, table size: 24
+	.fardata: load addr=0001c140, load size=0000000d bytes, run addr=0001a530, run size=0000000c bytes, compression=rle
+	.bss: load addr=0001c15c, load size=00000008 bytes, run addr=00000008, run size=00000008 bytes, compression=zero_init
+	.far: load addr=0001c164, load size=00000008 bytes, run addr=00008000, run size=0001252c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0001c150 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_rle24
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+0001bce0   C$$EXIT
+0001c16c   __TI_CINIT_Base
+0001c184   __TI_CINIT_Limit
+0001c150   __TI_Handler_Table_Base
+0001c15c   __TI_Handler_Table_Limit
+UNDEFED    __TI_INITARRAY_Base
+UNDEFED    __TI_INITARRAY_Limit
+0001c140   __TI_STACK_END
+00000400   __TI_STACK_SIZE
+00000008   __TI_STATIC_BASE
+UNDEFED    __TI_TLS_INIT_Base
+UNDEFED    __TI_TLS_INIT_Limit
+00000001   __TI_args_main
+0001bc40   __TI_cpp_init
+0001bd00   __TI_decompress_none
+0001bd20   __TI_decompress_rle24
+0001a538   __TI_enable_exit_profile_output
+ffffffff   __TI_pprof_out_hndl
+ffffffff   __TI_prof_data_size
+ffffffff   __TI_prof_data_start
+0001ba60   __TI_tls_init
+0001b7e0   __TI_zero_init
+ffffffff   __binit__
+ffffffff   __c_args__
+0001bca0   _args_main
+0001b5e0   _auto_init_elf
+0001bbc0   _c_int00
+0001a530   _cleanup_ptr
+0001a534   _dtors_ptr
+0001bd40   _stack
+0001bce0   abort
+ffffffff   binit
+0000a400   buffers
+0001ae18   clear_status
+0001a518   cmd
+0001aae4   config_pktdma_loopback
+0001aa40   config_pktdma_qm
+0001ab18   config_pktdma_retry_timeout
+0001abd0   config_rx_flow
+0001ab54   config_tx_chan
+0001aba0   config_tx_sched
+0001b6e0   copy_in
+0001a8f0   disable_accumulator
+0001a6a4   divert_queue
+0001a6ec   empty_queue
+0001acf4   enable_rx_chan
+0001ad24   enable_tx_chan
+0001b9a0   exit
+0001a7a4   get_byte_count
+0001a7d4   get_descriptor_count
+0001a400   hostList
+00000008   host_pkt
+00008000   host_region
+0001b1c4   main
+0001bb20   memcpy
+0001b8c0   memset
+0001a490   monoList
+0000000c   mono_pkt
+00009000   mono_region
+0001af04   pdsp_control
+0001afa4   pdsp_disable
+0001b04c   pdsp_download_firmware
+0001af4c   pdsp_enable
+0001aff8   pdsp_running
+0001a670   pop_queue
+0001a838   program_accumulator
+0001a608   push_queue
+0001ae74   read_intcount
+0001ad50   read_status
+0001a9a8   set_firmware_timer
+0001a5b0   set_link_ram
+0001a540   set_memory_region
+0001a808   set_queue_threshold
+0001adc0   set_status
+0001aee0   write_eoi
+0001aea8   write_intcount
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000008   __TI_STATIC_BASE
+00000008   host_pkt
+0000000c   mono_pkt
+00000400   __TI_STACK_SIZE
+00008000   host_region
+00009000   mono_region
+0000a400   buffers
+0001a400   hostList
+0001a490   monoList
+0001a518   cmd
+0001a530   _cleanup_ptr
+0001a534   _dtors_ptr
+0001a538   __TI_enable_exit_profile_output
+0001a540   set_memory_region
+0001a5b0   set_link_ram
+0001a608   push_queue
+0001a670   pop_queue
+0001a6a4   divert_queue
+0001a6ec   empty_queue
+0001a7a4   get_byte_count
+0001a7d4   get_descriptor_count
+0001a808   set_queue_threshold
+0001a838   program_accumulator
+0001a8f0   disable_accumulator
+0001a9a8   set_firmware_timer
+0001aa40   config_pktdma_qm
+0001aae4   config_pktdma_loopback
+0001ab18   config_pktdma_retry_timeout
+0001ab54   config_tx_chan
+0001aba0   config_tx_sched
+0001abd0   config_rx_flow
+0001acf4   enable_rx_chan
+0001ad24   enable_tx_chan
+0001ad50   read_status
+0001adc0   set_status
+0001ae18   clear_status
+0001ae74   read_intcount
+0001aea8   write_intcount
+0001aee0   write_eoi
+0001af04   pdsp_control
+0001af4c   pdsp_enable
+0001afa4   pdsp_disable
+0001aff8   pdsp_running
+0001b04c   pdsp_download_firmware
+0001b1c4   main
+0001b5e0   _auto_init_elf
+0001b6e0   copy_in
+0001b7e0   __TI_zero_init
+0001b8c0   memset
+0001b9a0   exit
+0001ba60   __TI_tls_init
+0001bb20   memcpy
+0001bbc0   _c_int00
+0001bc40   __TI_cpp_init
+0001bca0   _args_main
+0001bce0   C$$EXIT
+0001bce0   abort
+0001bd00   __TI_decompress_none
+0001bd20   __TI_decompress_rle24
+0001bd40   _stack
+0001c140   __TI_STACK_END
+0001c150   __TI_Handler_Table_Base
+0001c15c   __TI_Handler_Table_Limit
+0001c16c   __TI_CINIT_Base
+0001c184   __TI_CINIT_Limit
+ffffffff   __TI_pprof_out_hndl
+ffffffff   __TI_prof_data_size
+ffffffff   __TI_prof_data_start
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    __TI_INITARRAY_Base
+UNDEFED    __TI_INITARRAY_Limit
+UNDEFED    __TI_TLS_INIT_Base
+UNDEFED    __TI_TLS_INIT_Limit
+
+[76 symbols]
