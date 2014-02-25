@@ -27,6 +27,7 @@ Qmss_AccCmd cmd;
 
 int main(void) {
 	int idx;
+	Uint16 qm_map[4];
 	/* Setup Memory Region 0 for 40 56 byte Host descriptors. Our
 	 * Host descriptors will be 32 bytes plus up to 6 words of PS data,
 	 * but the next best size is 64 bytes times 64 descriptors. */
@@ -146,7 +147,6 @@ int main(void) {
 	enable_rx_chan(QMSS_PKTDMA_RX_CHAN_REGION, 0, 0x80000000);
 	enable_rx_chan(QMSS_PKTDMA_RX_CHAN_REGION, 1, 0x80000000);
 
-	add_a_line();
 
 
 	return 0;
