@@ -146,6 +146,7 @@ int main(void) {
 	enable_rx_chan(QMSS_PKTDMA_RX_CHAN_REGION, 0, 0x80000000);
 	enable_rx_chan(QMSS_PKTDMA_RX_CHAN_REGION, 1, 0x80000000);
 
+	add_a_line();
 
 
 	return 0;
