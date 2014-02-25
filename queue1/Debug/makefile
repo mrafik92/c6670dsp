@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/C6000 Code Generation Tools 7.4.6
+CG_TOOL_ROOT := C:/ti/ccsv5/tools/compiler/c6000_7.4.4
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
@@ -114,7 +114,7 @@ all: queue1.out
 queue1.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"C:/ti/C6000 Code Generation Tools 7.4.6/bin/cl6x" -mv6600 --abi=eabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"queue1.map" -i"C:/ti/C6000 Code Generation Tools 7.4.6/lib" -i"C:/ti/C6000 Code Generation Tools 7.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="queue1_linkInfo.xml" --rom_model -o "queue1.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv6600 --abi=eabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"queue1.map" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="queue1_linkInfo.xml" --rom_model -o "queue1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
