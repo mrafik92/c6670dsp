@@ -148,7 +148,7 @@ int main(void) {
 	enable_rx_chan(QMSS_PKTDMA_RX_CHAN_REGION, 1, 0x80000000);
 
 
-	//merwesh el gamed fash555555555555555555555555555555555555555555
+	//merwesh el ggggg fash555555555555555555555555555555555555555555
 	return 0;
 
 }
